@@ -1,0 +1,14 @@
+#result {color: deepskyblue; border:  1px solid gray;}
+
+#press {background-color: skyblue; font-size: 16px; font-family: cursive;
+		 border-radius: 10px;}
+#press:hover {background-color: darkblue; color: ghostwhite;}
+
+.c1	{color: lightblue; border: 5px solid; margin-left: 300px; 
+			margin-right: 300px; background-color: lemonchiffon;
+			text-align: center; font-family: fantasy;}
+
+.c2 {color: lemonchiffon; background-color: lightblue;}
+
+.c3 {color: lightblue; background-color: lemonchiffon;}
+		
