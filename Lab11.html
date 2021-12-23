@@ -5,10 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
 
-	<link rel="stylesheet" type="text/css" href="">
+	<link rel="stylesheet" type="text/css" href="Calculator.css">
 </head>
 <body>
-	<div>
+	<div class="c1">
 		<h1>JS Calculator</h1>
 		<form action="#">
 			<p>Number 1<br><input id="number1" type="text"></p>
@@ -26,7 +26,7 @@
 			<p><input id="press" type="button" value="Add" onclick="calculate()"></p>
 		</form>
 		<div id="result">
-			<div>Result</div>
+			<div>Result = </div>
 		</div>
 	</div>
 
@@ -58,6 +58,8 @@
 			var textNode = document.createTextNode(answer);
 			newLine.appendChild(textNode);
 			document.getElementById('result').appendChild(newLine);
+			
+
 		}
 
 		function setButton(val){
