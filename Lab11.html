@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+	<div>
+		<h1>JS Calculator</h1>
+		<form action="#">
+			<p>Number 1<br><input id="number1" type="text"></p>
+			<p>Number 2<br><input id="number2" type="text"></p>
+
+			<p>Operate Way?<br>
+				<select id = "operate" onchange="setButton(this.value)">
+					<option value="plus"> + </option>
+					<option value="minus"> - </option>
+					<option value="multiply"> * </option>
+					<option value="divide"> / </option>
+				</select>
+			</p>
+
+			<p><input id="press" type="button" value="Add" onclick="calculate()"></p>
+		</form>
+		<div id="result">
+			<div>Result</div>
+		</div>
+	</div>
+
+	<script>
+		var operator = document.getElementById("operate");
+		var answer;
+
+		function calculate(){
+			var firstNumber = parseInt(document.getElementById("number1").value);
+			var secondNumber = parseInt(document.getElementById("number2").value);
+			
+			if(operator.value == "plus"){
+				answer = firstNumber + secondNumber;
+				output();
+			}else if(operator.value == "minus"){
+				answer = firstNumber - secondNumber;
+				output();
+			}else if(operator.value == "multiply"){
+				answer = firstNumber * secondNumber;
+				output();
+			}else{
+				answer = firstNumber / secondNumber;
+				output();
+			}
+		}
+
+		function output(){
+			var newLine = document.createElement('div');
+			var textNode = document.createTextNode(answer);
+			newLine.appendChild(textNode);
+			document.getElementById('result').appendChild(newLine);
+		}
+
+		function setButton(val){
+			var button = document.getElementById("press");
+
+			if(val == "plus"){
+				button.value = "Add";
+			}else if(val == "minus"){
+				button.value = "Minus";
+			}else if(val == "multiply"){
+				button.value = "Multiply"
+			}else{
+				button.value = "Divide"
+			}
+		}
+	</script>
+
+</body>
+</html>
