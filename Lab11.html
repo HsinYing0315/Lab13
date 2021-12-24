@@ -25,8 +25,8 @@
 
 			<p><input id="press" type="button" value="Add" onclick="calculate()"></p>
 		</form>
-		<div id="result">
-			<div>Result = </div>
+		<div>
+			<p id="result">Result = </p>
 		</div>
 	</div>
 
@@ -40,26 +40,17 @@
 			
 			if(operator.value == "plus"){
 				answer = firstNumber + secondNumber;
-				output();
+				document.getElementById("result").textContent = "Result = " + answer;
 			}else if(operator.value == "minus"){
 				answer = firstNumber - secondNumber;
-				output();
+				document.getElementById("result").textContent = "Result = " + answer;
 			}else if(operator.value == "multiply"){
 				answer = firstNumber * secondNumber;
-				output();
+				document.getElementById("result").textContent = "Result = " + answer;
 			}else{
 				answer = firstNumber / secondNumber;
-				output();
+				document.getElementById("result").textContent = "Result = " + answer;
 			}
-		}
-
-		function output(){
-			var newLine = document.createElement('div');
-			var textNode = document.createTextNode(answer);
-			newLine.appendChild(textNode);
-			document.getElementById('result').appendChild(newLine);
-			
-
 		}
 
 		function setButton(val){
